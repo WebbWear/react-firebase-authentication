@@ -1,14 +1,10 @@
 const config = {
-    apiKey: "AIzaSyAZ5Do1tE92ByFogEWJJjd_aulvnBTEgoo",
-    authDomain: "authentication-48eb9.firebaseapp.com",
-    databaseURL: "https://authentication-48eb9.firebaseio.com",
-    projectId: "authentication-48eb9",
-    storageBucket: "authentication-48eb9.appspot.com",
-    messagingSenderId: "794863351724",
-    appId: "1:794863351724:web:803ca352de32be60"
-};
-
-
-
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  };
 
 
