@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+
+react-firebase-authentication/blob/master/src/components/Firebase/firebase.js
