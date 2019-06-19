@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
@@ -17,32 +17,32 @@ const Navigation = () => (
 );
 
 const NavigationAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+  <ul className="nav nav-tabs">
+    <li className="nav-item">
+      <NavLink className="nav-link" activeClassName="active" exact to={ROUTES.LANDING}>Landing</NavLink>
     </li>
-    <li>
-      <Link to={ROUTES.HOME}>Home</Link>
+    <li className="nav-item">
+      <NavLink className="nav-link" activeClassName="active" to={ROUTES.HOME}>Home</NavLink>
     </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
+    <li className="nav-item">
+      <NavLink className="nav-link" activeClassName="active" to={ROUTES.ACCOUNT}>Account</NavLink>
     </li>
-    <li>
-      <Link to={ROUTES.ADMIN}>Admin</Link>
+    <li className="nav-item">
+      <NavLink className="nav-link" activeClassName="active" to={ROUTES.ADMIN}>Admin</NavLink>
     </li>
-    <li>
-      <SignOutButton />
+    <li className="nav-item">
+    <SignOutButton />
     </li>
   </ul>
 );
 
 const NavigationNonAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
+  <ul className="nav nav-tabs">
+    <li className="nav-item">
+      <NavLink className="nav-link" activeClassName="active" to={ROUTES.LANDING}>Landing</NavLink>
     </li>
     <li>
-      <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+      <NavLink className="nav-link" activeClassName="active" to={ROUTES.SIGN_IN}>Sign In</NavLink>
     </li>
   </ul>
 );

@@ -18,6 +18,8 @@ class AdminPage extends Component {
     this.props.firebase.users().on('value', snapshot => {
       const usersObject = snapshot.val();
 
+      if (!usersObject) return;
+
       const usersList = Object.keys(usersObject).map(key => ({
         ...usersObject[key],
         uid: key,
@@ -50,18 +52,22 @@ class AdminPage extends Component {
 }
 
 const UserList = ({ users }) => (
-  <ul>
+  <ul className="list-group">
     {users.map(user => (
-      <li key={user.uid}>
-        <span>
-          <strong>ID:</strong> {user.uid}
-        </span>
-        <span>
+      <li key={user.uid} className="list-group-item">
+        <div className="card">
+          <div className="card-header">
+            <strong>ID:</strong> {user.uid}
+          </div>
+        <div className="card-body">
+        <p>
           <strong>E-Mail:</strong> {user.email}
-        </span>
-        <span>
+        </p>
+        <p>
           <strong>Username:</strong> {user.username}
-        </span>
+        </p>
+        </div>
+        </div>
       </li>
     ))}
   </ul>
