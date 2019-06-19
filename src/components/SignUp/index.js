@@ -159,6 +159,3 @@ const SignUpForm = compose(
 )(SignUpFormBase);
 export default SignUpPage;
 export { SignUpForm, SignUpLink };
-
-
-
